@@ -45,3 +45,4 @@ e.	Lambda function to deregister ami
 
 
 <a name="cloudformation">CloudFormation</a>
+txt
