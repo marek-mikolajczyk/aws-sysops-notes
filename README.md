@@ -78,7 +78,8 @@ move resource between stacks
 - refactor stacks. 
 - retain detection policy
 
-working with templates
+working with templates:
+
 
 tools: AWS CloudFormation Designer (GUI but properties manually)
 
