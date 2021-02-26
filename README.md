@@ -1,6 +1,6 @@
 # aws-sysops-notes
 [deployment_and_provisioning](#deployment_and_provisioning)
-[CloudFormation](#cloudformation)
+[CloudFormation](#cloud-formation)
 
 
 <a name="deployment_and_provisioning">Deployment and Provisioning</a>
@@ -44,5 +44,5 @@ e.	Lambda function to deregister ami
 
 
 
-<a name="cloudformation">CloudFormation</a>
+<a name="cloud-formation">CloudFormation</a>
 txt
