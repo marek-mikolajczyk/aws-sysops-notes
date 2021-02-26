@@ -52,6 +52,36 @@ templates – json/yaml
 
 change set – to change infra
 
+IAM user needs permission to create EC2 to use CF.
+Save template to s3. if locally, aws still will upload it, then default s3 permissions on bucket
+template can contain input parameters
+update stack - modify s3 - CF generate change set 
+
+updating stacks
+- no interruption - no id change
+- update with interruption
+- replace - new physical id 
+- direct modification - won't replace resource 
+- input parameter. 2 changes - static and dynamic
+- prevent changes - stack policy. by default all protected, add allow. one policy. applies during stack updates
+- stack status: failed (cannot update) or completed
+- drift - manual changes. CF detect drift . some resources dont' have drift 
+- drift detect on private resource that are provisionale = provision type fully_mutable or immutable
+- drift fix retains resource, not deletes
+
+import resources:
+- resource import (not all)
+- identifier property (aws::s3::bucket) and value (bucket name)
+- must have deletionpolicy
+
+move resource between stacks
+- refactor stacks. 
+- retain detection policy
+
+working with templates
+
+tools: AWS CloudFormation Designer (GUI but properties manually)
+
 artifact – file between stages in pipeline/s output of build process to consume by another job. Available after run
 CD – code changes are automatically BUILT. Update repository and bam
 1.	Source artifact – template and files
