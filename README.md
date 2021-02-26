@@ -45,6 +45,7 @@ e.	Lambda function to deregister ami
 
 
 <a name="cloud-formation">CloudFormation</a>
+==
 
 integrates with ci/cd pipeline. Aws codepipeline
 templates – json/yaml
