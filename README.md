@@ -45,4 +45,14 @@ e.	Lambda function to deregister ami
 
 
 <a name="cloud-formation">CloudFormation</a>
-txt
+
+integrates with ci/cd pipeline. Aws codepipeline
+templates – json/yaml
+
+change set – to change infra
+
+artifact – file between stages in pipeline/s output of build process to consume by another job. Available after run
+CD – code changes are automatically BUILT. Update repository and bam
+1.	Source artifact – template and files
+2.	
+
