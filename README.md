@@ -1,5 +1,6 @@
 # aws-sysops-notes
 [deployment_and_provisioning](#deployment_and_provisioning)
+[CloudFormation](#cloudformation)
 
 
 <a name="deployment_and_provisioning">Deployment and Provisioning</a>
@@ -41,3 +42,6 @@ c.	CF custom resource that invokes lambda
 d.	Take new build ami
 e.	Lambda function to deregister ami
 
+
+
+<a name="cloudformation">CloudFormation</a>
