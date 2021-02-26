@@ -1,9 +1,6 @@
 # aws-sysops-notes
 [deployment_and_provisioning](#deployment_and_provisioning)
 
-### <a name="tith"></a>This is the Heading
-
-
 
 <a name="deployment_and_provisioning">Deployment and Provisioning</a>
 ==
