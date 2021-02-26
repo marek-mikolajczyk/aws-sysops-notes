@@ -79,6 +79,7 @@ move resource between stacks
 - retain detection policy
 
 working with templates:
+- 
 
 
 tools: AWS CloudFormation Designer (GUI but properties manually)
