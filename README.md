@@ -111,3 +111,26 @@ CD – code changes are automatically BUILT. Update repository and bam
 1.	Source artifact – template and files
 2.	
 
+
+
+
+ELB
+
+https://aws.amazon.com/elasticloadbalancing/features/#Product_comparisons
+
+- in region, distributes to AZ
+- monitors health
+- arch: 
+	- listener for incoming requests (port+protocol)
+	- rules for routing (priority+action+condition)
+	- target group(s). target can be in multiple TG
+	- HC per TG
+
+supports:
+- ALB
+	- features:
+		- path condition (based on url)
+		- host condition (http header)
+- NLB
+- GLB 
+- CLB
