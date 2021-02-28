@@ -66,6 +66,15 @@ topics:
 	- updating stack creates change set (summary of changes)
 	- shows what will be deleted
 
+blue/green deployment:
+- use codedeploy
+- new env green, current env blue - both in template
+- transform section AWS::CodeDeployBlueGreen and Hook section AWS::CodeDeploy::BlueGreen
+- create change set to review changes
+
+stackset:
+- crud a stack on multiple accounts with single operation
+
 IAM user needs permission to create EC2 to use CF.
 Save template to s3. if locally, aws still will upload it, then default s3 permissions on bucket
 template can contain input parameters
@@ -82,6 +91,8 @@ updating stacks
 - drift - manual changes. CF detect drift . some resources dont' have drift 
 - drift detect on private resource that are provisionale = provision type fully_mutable or immutable
 - drift fix retains resource, not deletes
+- output section, export field vs nested stack
+
 
 import resources:
 - resource import (not all)
@@ -91,9 +102,6 @@ import resources:
 move resource between stacks
 - refactor stacks. 
 - retain detection policy
-
-working with templates:
-- 
 
 
 tools: AWS CloudFormation Designer (GUI but properties manually)
