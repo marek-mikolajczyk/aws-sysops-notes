@@ -59,7 +59,7 @@ topics:
 	- changes to running resource in a stack 
 	- updating stack creates change set (summary of changes)
 	- shows what will be deleted
-	- update
+
 
 change set – to change infra
 
