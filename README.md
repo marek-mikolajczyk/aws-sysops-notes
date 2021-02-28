@@ -48,7 +48,17 @@ e.	Lambda function to deregister ami
 ==
 
 integrates with ci/cd pipeline. Aws codepipeline
-templates – json/yaml
+
+
+topics:
+- templates - json/yaml
+	- "Type" : "AWS::EC2::Instance", or "AWS::EC2::EIP", and "InstanceId" : {"Ref": "MyEC2Instance"}
+	- input parameters - asked when launched
+- stacks - collection of ressources
+- change sets 
+	- changes to running resource in a stack 
+	- updating stack creates change set (summary of changes)
+	- shows what will be deleted
 
 change set – to change infra
 
