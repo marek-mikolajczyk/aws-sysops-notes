@@ -58,7 +58,7 @@ topics:
 - change sets 
 	- changes to running resource in a stack 
 	- updating stack creates change set (summary of changes)
-	- shows what will be deleted
+	- shows what will be deleted xx
 
 
 change set – to change infra
