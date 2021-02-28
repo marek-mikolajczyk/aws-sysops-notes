@@ -80,7 +80,7 @@ Save template to s3. if locally, aws still will upload it, then default s3 permi
 template can contain input parameters
 update stack - modify s3 - CF generate change set 
 
-updating stacks
+updating stacks:
 - no interruption - no id change
 - update with interruption
 - replace - new physical id 
