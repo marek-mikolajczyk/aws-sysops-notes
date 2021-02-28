@@ -54,14 +54,17 @@ topics:
 - templates - json/yaml
 	- "Type" : "AWS::EC2::Instance", or "AWS::EC2::EIP", and "InstanceId" : {"Ref": "MyEC2Instance"}
 	- input parameters - asked when launched
-- stacks - collection of ressources
+	- mappings in template - ex AMI ID/region
+	- functions like join text
+	- template macros - custom processing on templates (replace or transform)
+		- lambda function toprocess
+		- resource CF macro - enable users to call lambda from CF template
+		- endpoint to skip public internet
+- stacks - collection of resources
 - change sets 
 	- changes to running resource in a stack 
 	- updating stack creates change set (summary of changes)
-	- shows what will be deleted test123
-
-
-change set – to change infra
+	- shows what will be deleted
 
 IAM user needs permission to create EC2 to use CF.
 Save template to s3. if locally, aws still will upload it, then default s3 permissions on bucket
