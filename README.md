@@ -1,6 +1,7 @@
 # aws-sysops-notes
 [deployment_and_provisioning](#deployment_and_provisioning)  
 [CloudFormation](#cloud-formation)
+[route-53](#route-53)
 
 
 <a name="deployment_and_provisioning">Deployment and Provisioning</a>
@@ -134,3 +135,41 @@ supports:
 - NLB
 - GLB 
 - CLB
+
+
+<a name="route_53">Route 53</a>
+==
+
+Features:
+- onpremise and aws
+- dns checks for healthy endpoints > cloudwatch alarm  > sns topic 
+	- ip address, protocol (http/s, tcp), threshold count
+- traffic flow (with visual editor)
+	- latency based
+	- geo dns 
+	- geo proximity
+	- weighted rr
+	- CF zone apex (= root domain), so example.com instead www.example.com
+- buy DNS 
+
+static webpage on s3 .
+1. create bucket type static website hosting
+2. create bucket for www and redirec requests
+
+
+use route 53:
+1. create hosted zone
+2. record + routing policy
+
+Route 53 routing policies:
+https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html
+- failover
+- geoloc. 
+	- based on from where dns queries come from
+	- default record for non-mapped ips. either ip of dns resolver, or client ip (EDNS0)
+- geoprox
+	- must use traffic flow
+	- bias to calculate closes server 
+- latency
+	- create latency record everywhere
+	- route 53 refers to its data about latency 
