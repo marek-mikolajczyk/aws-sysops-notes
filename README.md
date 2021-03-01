@@ -165,11 +165,17 @@ Route 53 routing policies:
 https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html
 - failover
 - geoloc. 
-	- based on from where dns queries come from
 	- default record for non-mapped ips. either ip of dns resolver, or client ip (EDNS0)
+	- map ip to location
+	- location of users (dns queries come from)
 - geoprox
 	- must use traffic flow
 	- bias to calculate closes server 
+	- based on location of resources
 - latency
 	- create latency record everywhere
 	- route 53 refers to its data about latency 
+	- multiple regions
+	
+geoprox vs geoloc vs latency
+https://tutorialsdojo.com/latency-routing-vs-geoproximity-routing-vs-geolocation-routing/
