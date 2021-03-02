@@ -1,11 +1,11 @@
 # aws-sysops-notes
 [deployment_and_provisioning](#deployment_and_provisioning)  
-[CloudFormation](#cloud-formation)
-[route-53](#route-53)
-[as_group](#ASG)
-[ec_2](#EC2)
-[ia_m](#IAM)
-[aws_lambda](#Lambda)
+[CloudFormation](#cloud-formation)  
+[route-53](#route-53)  
+[as_group](#ASG)  
+[ec_2](#EC2)  
+[ia_m](#IAM)  
+[aws_lambda](#Lambda)  
 [aws_batch](#Batch)
 
 
