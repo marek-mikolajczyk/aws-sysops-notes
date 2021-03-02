@@ -169,7 +169,7 @@ https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html
 	- map ip to location
 	- location of users (dns queries come from)
 - geoprox
-	- must use traffic flow
+	- must use traffic flow (only public zones)
 	- bias to calculate closes server 
 	- based on location of resources
 - latency
