@@ -125,6 +125,7 @@ CD – code changes are automatically BUILT. Update repository and bam
 ELB
 
 https://aws.amazon.com/elasticloadbalancing/features/#Product_comparisons
+https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-access-logs.html
 
 - in region, distributes to AZ
 - monitors health
@@ -205,6 +206,8 @@ features:
 
 https://aws.amazon.com/premiumsupport/knowledge-center/manage-service-limits/
 
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html
+
 
 - max instances 20 per region. Trusted advisor shows quotas
 
@@ -212,12 +215,24 @@ https://aws.amazon.com/premiumsupport/knowledge-center/manage-service-limits/
 <a name="ia_m">IAM</a>
 ==
 - trust entity
+- permission boundaries - max permissions
 
 
 <a name="aws_lambda">Lambda</a>
 ==
 - schedule via cloudwatch event
+- 
 
 <a name="aws_batch">Batch</a>
 ==
 https://aws.amazon.com/blogs/compute/optimizing-for-cost-availability-and-throughput-by-selecting-your-aws-batch-allocation-strategy/
+
+https://docs.aws.amazon.com/batch/latest/userguide/Batch_GetStarted.html
+
+- create batch vpc and compute environment (ec2)
+
+
+<a name="aws_db">Databases</a>
+==
+- dynamodb point in time recovery, 35 days must enable
+- dynamodb 
