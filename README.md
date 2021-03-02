@@ -2,6 +2,11 @@
 [deployment_and_provisioning](#deployment_and_provisioning)  
 [CloudFormation](#cloud-formation)
 [route-53](#route-53)
+[as_group](#ASG)
+[ec_2](#EC2)
+[ia_m](#IAM)
+[aws_lambda](#Lambda)
+[aws_batch](#Batch)
 
 
 <a name="deployment_and_provisioning">Deployment and Provisioning</a>
@@ -61,6 +66,8 @@ topics:
 		- lambda function toprocess
 		- resource CF macro - enable users to call lambda from CF template
 		- endpoint to skip public internet
+	- conditions to select size based on environment
+	- CF error - rollback in progress status
 - stacks - collection of resources
 - change sets 
 	- changes to running resource in a stack 
@@ -179,3 +186,38 @@ https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html
 	
 geoprox vs geoloc vs latency
 https://tutorialsdojo.com/latency-routing-vs-geoproximity-routing-vs-geolocation-routing/
+
+
+<a name="as_group">ASG</a>
+==
+https://aws.amazon.com/blogs/aws/new-ec2-auto-scaling-groups-with-multiple-instance-types-purchase-options/?&trk=ha_a131L000005uJTZQA2&trkCampaign=pac-edm-2019-spot-sitemerch-autoscalingblog&sc_ichannel=ha&sc_icampaign=Adoption_Campaign_pac-edm-2019-spot-site_merch-adoption-all-auto_scaling_console_test&sc_ioutcome=Enterprise_Digital_Marketing
+
+https://aws.amazon.com/blogs/aws/new-ec2-auto-scaling-groups-with-multiple-instance-types-purchase-options/?&trk=ha_a131L000005uJTZQA2&trkCampaign=pac-edm-2019-spot-sitemerch-autoscalingblog&sc_ichannel=ha&sc_icampaign=Adoption_Campaign_pac-edm-2019-spot-site_merch-adoption-all-auto_scaling_console_test&sc_ioutcome=Enterprise_Digital_Marketing
+
+
+features:
+- distribution strategies
+- launch configuration cannot modify after creation
+- 
+
+<a name="ec_2">EC2</a>
+==
+
+https://aws.amazon.com/premiumsupport/knowledge-center/manage-service-limits/
+
+
+- max instances 20 per region. Trusted advisor shows quotas
+
+
+<a name="ia_m">IAM</a>
+==
+- trust entity
+
+
+<a name="aws_lambda">Lambda</a>
+==
+- schedule via cloudwatch event
+
+<a name="aws_batch">Batch</a>
+==
+https://aws.amazon.com/blogs/compute/optimizing-for-cost-availability-and-throughput-by-selecting-your-aws-batch-allocation-strategy/
