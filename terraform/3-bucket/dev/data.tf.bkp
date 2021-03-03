@@ -1,0 +1,16 @@
+/*
+data "template_file" "user_data" {
+	template = file("user-data.sh")
+	vars = {
+		server_ip = aws_instance.example_dev.public_ip
+	}
+}
+*/
+
+data "template_file" "user_data" {
+	template = file("user-data.sh")
+
+	vars = {
+		server_port = var.server_port
+	}		
+}
