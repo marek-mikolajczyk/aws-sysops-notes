@@ -127,6 +127,7 @@ ELB
 https://aws.amazon.com/elasticloadbalancing/features/#Product_comparisons
 https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-access-logs.html
 
+- when deleted, listerenrs also get deleted
 - in region, distributes to AZ
 - monitors health
 - arch: 
@@ -151,7 +152,7 @@ supports:
 Features:
 - onpremise and aws
 - dns checks for healthy endpoints > cloudwatch alarm  > sns topic 
-	- ip address, protocol (http/s, tcp), threshold count
+	- public ip address, protocol (http/s, tcp), threshold count
 - traffic flow (with visual editor)
 	- latency based
 	- geo dns 
@@ -221,7 +222,7 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html
 <a name="aws_lambda">Lambda</a>
 ==
 - schedule via cloudwatch event
-- 
+-  for 3rd party libraries - create deployment package and upload to lambda/s3
 
 <a name="aws_batch">Batch</a>
 ==
@@ -236,3 +237,36 @@ https://docs.aws.amazon.com/batch/latest/userguide/Batch_GetStarted.html
 ==
 - dynamodb point in time recovery, 35 days must enable
 - dynamodb 
+
+WAF
+==
+- not at subnet level
+
+VPC
+==
+- NACL to multiple subnets
+- subnet with only one NACL
+- spread placement max 7 ec2/AZ
+
+Config
+==
+- aggregator - multiple accounts and regions. no need to manually create in each region
+https://docs.aws.amazon.com/config/latest/developerguide/setup-aggregator-console.html
+
+Systems Manaager
+==
+- max 1000 onprem in single account and region
+
+S3
+==
+https://aws.amazon.com/premiumsupport/knowledge-center/s3-bucket-owner-access/
+- access login for bucket, more effective that cloudtrail
+
+EBS
+==
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-initialize.html
+
+Instance store
+==
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html
+- for temporary stuff
