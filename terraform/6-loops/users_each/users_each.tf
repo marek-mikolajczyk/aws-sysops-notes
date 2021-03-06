@@ -13,3 +13,9 @@ resource "aws_iam_user" "example2" {
         count = length(var.user_list)
         name = var.user_list[count.index]
 }
+
+
+resource "aws_iam_user" "example3" {
+        for_each = toset(var.user_list)
+        name = each.value
+}
