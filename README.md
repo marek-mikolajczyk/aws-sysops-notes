@@ -229,6 +229,9 @@ https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/w
 
 <a name="aws_batch">Batch</a>
 ==
+- shell script, docker container, linux exec 
+- runs on aws fargate (containers, eks) or ec2
+- to start, create iam , vpc and subnet
 https://aws.amazon.com/blogs/compute/optimizing-for-cost-availability-and-throughput-by-selecting-your-aws-batch-allocation-strategy/
 
 https://docs.aws.amazon.com/batch/latest/userguide/Batch_GetStarted.html
