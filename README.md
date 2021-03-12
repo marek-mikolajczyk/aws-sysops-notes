@@ -223,6 +223,9 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html
 ==
 - schedule via cloudwatch event
 -  for 3rd party libraries - create deployment package and upload to lambda/s3
+- sam templates and CF
+https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/what-is-sam.html
+- increase concurrent limit - request to AWS SC
 
 <a name="aws_batch">Batch</a>
 ==
@@ -247,11 +250,16 @@ VPC
 - NACL to multiple subnets
 - subnet with only one NACL
 - spread placement max 7 ec2/AZ
+- vpc traffic mirroring - replicate network traffic and forward it to tools.
+https://aws.amazon.com/blogs/aws/new-vpc-traffic-mirroring/
 
 Config
 ==
 - aggregator - multiple accounts and regions. no need to manually create in each region
 https://docs.aws.amazon.com/config/latest/developerguide/setup-aggregator-console.html
+- logs changes to config, and retraces steps via cloudtrail 
+https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/TrackingChanges.html
+- inventory of resources and alerts on config changes. but no api calls 
 
 Systems Manaager
 ==
@@ -261,12 +269,64 @@ S3
 ==
 https://aws.amazon.com/premiumsupport/knowledge-center/s3-bucket-owner-access/
 - access login for bucket, more effective that cloudtrail
+- block public access 
+https://docs.aws.amazon.com/AmazonS3/latest/user-guide/block-public-access.html
+- doesn't provide posix
 
 EBS
 ==
 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-initialize.html
+- data consistency  - ebs disables io on volume, so volume status is fail. Switch to auto-enable io or enable volume io
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-volume-status.html#work_volumes_impaired
 
 Instance store
 ==
 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html
 - for temporary stuff
+
+
+cloud watch log insights
+==
+- analyze data
+https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AnalyzingLogData.html
+
+Athena
+==
+- analyzes only s3
+
+Kinesis
+==
+real-time processing of logs 
+
+Firehose
+==
+- 1 minute lag
+
+AWS artifact 
+==
+- pci attest
+- https://docs.aws.amazon.com/en_pv/artifact/latest/ug/getting-started.html
+
+KMS
+==
+- customer managed key - import your own key to encrypt ebs 
+https://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html
+
+
+ALB
+==
+- first detach instances, then disable ALB
+
+
+OpsWorks
+==
+- cfg mgmt - provides managed chef and puppet instances
+
+EFS
+==
+- posix
+
+
+RDS
+==
+- parameter groups
