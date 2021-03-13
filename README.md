@@ -255,11 +255,24 @@ https://aws.amazon.com/blogs/aws/new-vpc-traffic-mirroring/
 
 Config
 ==
+- set recording on/off. When off, only schedule still run
+- rules aws or custom (lambda) 
 - aggregator - multiple accounts and regions. no need to manually create in each region
 https://docs.aws.amazon.com/config/latest/developerguide/setup-aggregator-console.html
 - logs changes to config, and retraces steps via cloudtrail 
 https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/TrackingChanges.html
 - inventory of resources and alerts on config changes. but no api calls 
+
+> define delivery channel (s3 and sns)
+  aws configservice deliver-config-snapshot --delivery-channel-name default
+> define resources 
+> define rule 
+> define trigger (conf change/periodic min 1h) 
+> define sns or cloudwatch rule or SQS
+> remediate (SSM documents)
+
+
+- 
 
 Systems Manaager
 ==
@@ -330,3 +343,11 @@ EFS
 RDS
 ==
 - parameter groups
+
+
+Cloudtrail
+==
+- enabled by default, 90 days history on actions CRUD
+- search API calls
+- can show requestor IP
+- cloudtrail insights - unusual activity for mgmt events
