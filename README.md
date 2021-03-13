@@ -53,6 +53,9 @@ Automation and optimization
 ==
 - CF customer ressources allow ex. lambda for create resources
 
+High availabiliy
+==
+- you can enable sticky sessions on ALB. R53 doesn't have sticky sessions
 
 Api gateway
 Codebuild 
