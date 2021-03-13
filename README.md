@@ -8,9 +8,51 @@
 [aws_lambda](#Lambda)  
 [aws_batch](#Batch)
 
+Networking
+==
+- HA bastion - create 2 bastion ec2 in separate AZ, behind ELB
+- improve S3 upload/download by feature S3 transfer acceleration on buckets
+- app in multiple regions - R53 with latency routing for best performance. 
+  Better than geolocation policy, because there's less network hoops 
+- subnet cannot be in many AZ
+
+
+
 
 <a name="deployment_and_provisioning">Deployment and Provisioning</a>
 ==
+- for repeated pooling of msg delivered more than once, use long pooling - better and cheaper
+- dynamoDB to be in 2 regions - configure global table. This makes multi region, multi master. 
+  There's one replica table per region. And sync
+- take scheduled snapshots with cloudwatch. 
+- to use onprem AD, choose AD connector
+
+Monitoring and reporting
+==
+- if ec2 in ASG drops to 0 because someone's action - check aws config
+- cloudwatch log insights - when using, no need for transfering the logs
+- if service quota is reached, to prevent it use lambda function to refresh AWS TA SL, create FW event rules to send status to SNS
+
+
+Security and Compliance
+==
+- for external specialist who has other AWS accounts - create IAM role and allow him to assume that role 
+- for server side encryption on S3, it's S3 SSE-C
+- critical security actions are: activate MFA on rool, use IAM password policy, delete root access keys
+- for asymmetric keys (1 key e, 2 key d) use Cloud HSM.  
+- for symmetric keys (same keys e/d) use KSM
+- govermental documentation is in AWS artifact
+- RDS instances use vpc sg. Cannot attach NACL 
+
+Storage and data management
+==
+- db with automatic scale up - aurora can, rds cannot 
+- for storing buffers or caches, use instance store
+
+Automation and optimization
+==
+- CF customer ressources allow ex. lambda for create resources
+
 
 Api gateway
 Codebuild 
@@ -346,7 +388,6 @@ EFS
 RDS
 ==
 - parameter groups
-<<<<<<< HEAD
 
 
 Cloudtrail
