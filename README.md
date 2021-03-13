@@ -355,5 +355,3 @@ Cloudtrail
 - search API calls
 - can show requestor IP
 - cloudtrail insights - unusual activity for mgmt events
-=======
->>>>>>> 9b7f854df67236e0ceb3d577de3a81a6d6327d39
